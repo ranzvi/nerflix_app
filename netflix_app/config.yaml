@@ -1,0 +1,11 @@
+new_content:
+  ratings: 7+
+  genre:
+    - drama
+    - action
+    - thriller
+    - mystery
+    - comedy
+  language:
+    - english
+    - german

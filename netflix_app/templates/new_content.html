@@ -1,0 +1,76 @@
+{% block content %}
+<style>
+    h2 { font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-weight bold;
+        color: #A40808;
+    }
+    table {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid #C60808;
+        background-color: #EEE7DB;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    thead {
+        background: #A40808;
+    }
+
+    table td, table th {
+        border: 1px solid #AAAAAA;
+        padding: 3px 2px;
+    }
+
+    tbody td {
+        font-size: 16px;
+    }
+
+    table thead th {
+        font-size: 19px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        border-left: 2px solid #A40808;
+    }
+
+    table thead th:first-child {
+        border-left: none;
+    }
+
+    table tfoot {
+        font-size: 13px;
+        font-weight: bold;
+        color: #FFFFFF;
+        background: #A40808;
+    }
+
+</style>
+<h2>New Netflix Content</h2>
+
+<table class="new_content">
+    <thead>
+    {% for key in data[0].keys() %}
+    <th> {{key.capitalize()}}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for content in data%}
+    <tr>
+        <td>{{content.name}}</td>
+        <td>{{content.season_or_year}}</td>
+        <td>{{content.description}}</td>
+        <td>{{content.ratings}}</td>
+        <td>{{content.genre}}</td>
+        <td>{{content.director}}</td>
+        <td>{{content.cast}}</td>
+        <td>{{content.runtime}}</td>
+        <td>{{content.language}}</td>
+        <td>{{content.awards}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
