@@ -1,5 +1,5 @@
 Flask==1.1.1
-PyYAML==5.3
+PyYAML==5.4
 Scrapy==1.8.0
 Jinja2==2.11.1
 crochet==1.12.0
